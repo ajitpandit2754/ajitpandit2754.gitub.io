@@ -90,6 +90,7 @@
 <h1 id="h1">The world Most importaint Subject</h1>
 
 <body id="main" .nav>
+  
   <h2 style="font-size:250%">Aman Mishra</h2>
   <img src="aman.jpg" alt="aman" height="400" width="200" />
   <h3 style="font-size:250%;color:red">class 11th E-579</h3>
@@ -147,6 +148,29 @@
       </form>
     </div>
   </section>
+  <p id="text1">Change my text.</p>
+  <p id="text2"></p>
+  <button id="button1" onclick="document.getElementById('text2').innerHTML='New text appears'
+    document.getElementById('button1').style.display='none'">Create new text</button>
+  <button id="button2" onclick=hidebutton1()>Show button1</button>
+  <br><br>
+  <input type="text" id="display1" oninput="updatetext1display()">
+  <br><br>
+  <h2 id="text1display"></h2>
+  <script>
+    document.getElementById("text1").innerHTML = "Updated through javascript"
+  
+    function hidebutton1()
+    {
+      document.getElementById("button1").style.display = "block"
+      document.getElementById("button2").style.display = "none"
+    }
+  
+    function updatetext1display()
+    {
+      document.getElementById("text1display").innerHTML = document.getElementById("display1").value;
+    }
+  </script>
 </body>
 
 </html>
